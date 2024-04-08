@@ -1,0 +1,11 @@
+<header>
+    <nav>
+        <ul>
+            <li><a routerLink="/">BulletinBoard</a></li>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/login" *ngIf="!isLoggedIn">Login</a></li>
+            <li><a routerLink="/register" *ngIf="!isLoggedIn">Register</a></li>
+            <li (click)="logout()" class="cursor-pointer p1-4" style="float: right;" *ngIf="isLoggedIn"><a>Logout</a></li>
+        </ul>
+    </nav>
+</header>

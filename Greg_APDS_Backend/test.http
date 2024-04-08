@@ -1,0 +1,84 @@
+# Done By: Greg Postings ST10114245 
+#  Module: APDS
+#  Class: BCA3 G7
+#  Task: POE Task 2
+#  Start Date and Time: 20 September 2022 at 10:20
+#  Finish Date and Time: 11 October 2022 at 12:35
+
+
+//------------------------------------- Users --------------------------------------//
+
+//----------------------------------------------------------------------------------//
+//Posting a new user / registering
+POST https://localhost:3000/api/users HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test1",
+    "firstName": "Greg",
+    "lastName": "Postings",
+    "password": "myPassword1"
+}
+
+
+###
+
+//----------------------------------------------------------------------------------//
+//Login
+POST https://localhost:3000/api/auth HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test1",
+    "password": "myPassword1"
+}
+
+
+###
+
+//------------------------------------- Posts --------------------------------------//
+
+
+//----------------------------------------------------------------------------------//
+//Posting a Post
+POST https://localhost:3000/api/bulletinBoardPosts HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlOGNmNDE1YTM5ZWY3MjM1ODczN2MiLCJpYXQiOjE2NjUyMTY1MTMsImV4cCI6MTY2NTIyMDExM30.CrpdXtAznhqGqQmQFh__sB6e-GdO5XsHXHkApSs1GqI
+
+{
+    "title": "Chicken Food 2",
+    "description": "Chickens eat it 2",
+    "departmentCode": "Animal Food"
+}
+
+
+###
+
+//----------------------------------------------------------------------------------//
+//Getting all Posts
+GET https://localhost:3000/api/bulletinBoardPosts HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlOGNmNDE1YTM5ZWY3MjM1ODczN2MiLCJpYXQiOjE2NjUyMTY1MTMsImV4cCI6MTY2NTIyMDExM30.CrpdXtAznhqGqQmQFh__sB6e-GdO5XsHXHkApSs1GqI
+
+
+###
+
+//----------------------------------------------------------------------------------//
+//Getting a Post
+GET https://localhost:3000/api/bulletinBoardPosts/633e8dfa15a39ef72358737f HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlOGNmNDE1YTM5ZWY3MjM1ODczN2MiLCJpYXQiOjE2NjUyMTY1MTMsImV4cCI6MTY2NTIyMDExM30.CrpdXtAznhqGqQmQFh__sB6e-GdO5XsHXHkApSs1GqI
+
+###
+
+//----------------------------------------------------------------------------------//
+//Deleting a post
+DELETE https://localhost:3000/api/bulletinBoardPosts/633e8dfa15a39ef72358737f HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlOGNmNDE1YTM5ZWY3MjM1ODczN2MiLCJpYXQiOjE2NjUyMTY1MTMsImV4cCI6MTY2NTIyMDExM30.CrpdXtAznhqGqQmQFh__sB6e-GdO5XsHXHkApSs1GqI
+
+###
+
+
+
+//--------------------------ooo000 END OF FILE 000ooo---------------------------//

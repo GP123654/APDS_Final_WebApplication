@@ -1,0 +1,81 @@
+
+
+
+<!-- Login Form -->
+<section>
+    <div class="imgBx">
+        <img src="assets/images/BulletinBoardLogin.jpg" /> <!-- Pictrure from: https://www.pexels.com/photo/agriculture-barn-clouds-corn-235725/ -->
+    </div>
+    <div class="contentBx">
+        <div class="formBx">
+            <h2>Login</h2>
+        <br>
+
+            <label for="username">Username:</label>
+            <input
+                id="username"
+                placeholder="Enter Username"
+                type="text"
+                required
+                minlength="3"
+                maxlength="50"
+                pattern="[A-Za-z0-9_-]"
+                [formControl]="username"
+                />
+                <label for="password">Password:</label>
+                <input
+                    id="password"
+                    placeholder="Enter Password"
+                    type="password"
+                    required
+                    minlength="8"
+                    maxlength="50"
+                    pattern="[A-Za-z0-9_-]"
+                    [formControl]="password"
+                    />
+                    <!-- Login Button -->
+                <button class="signInBtn"
+                (click)=" onSubmit($event)"
+                >Login
+                </button>   
+                <br><br><br>
+                <app-error *ngIf= "hasError" [message]="errorMessage"></app-error>
+        </div>
+    </div>
+</section>
+
+
+<!-- #region Original Code -->
+
+<!--<main class="container mx-auto">
+    <div class="m-4 rounded p-4 shadow">
+        <app-error *ngIf= "hasError" [message]="errorMessage"></app-error>
+        <form class="flex flex-col">
+            <label for="username" class="mb-2">Username:</label>
+            <input
+                id="username"
+                placeholder="Enter Username"
+                type="text"
+                class="mb-4 rounded bg-gray-50 px-4 py-2"
+                [formControl]="username"
+                />
+                <label for="password" class="mb-2">Password:</label>
+                <input
+                    id="password"
+                    placeholder="Enter Password"
+                    type="password"
+                    class="mb-4 rounded bg-gray-50 px-4 py-2"
+                    [formControl]="password"
+                    />-->
+                    <!-- Login Button -->
+                <!--<button class="mt-4 rounded bg-blue-500 px-4 py-2 text-white"
+                (click)=" onSubmit($event)"
+                >Login
+                </button>
+        </form>
+    </div>
+</main>-->
+
+<!--#endregion-->
+
+<!----------------------------------- END OF FILE ----------------------------------->

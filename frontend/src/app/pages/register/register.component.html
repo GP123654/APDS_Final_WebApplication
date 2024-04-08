@@ -1,0 +1,141 @@
+
+
+
+
+<section>
+    <div class="imgBx">
+        <img src="assets/images/Handshake1.jpg" /> <!-- Pictrure from: https://www.pexels.com/photo/agriculture-barn-clouds-corn-235725/ -->
+    </div>
+    <div class="contentBx">
+        <div class="formBx">
+            <h2>Register</h2>
+        <br>
+
+        <label for="username">Username:</label>
+        <input
+            id="username"
+            placeholder="Enter Username"
+            type="text"
+            required
+            minlength="3"
+            maxlength="50"
+            pattern="[A-Za-z0-9_-]"
+            [formControl]="username"
+            />
+        <label for="firstName">First Name:</label>
+        <input
+            id="firstName"
+            placeholder="Enter First Name"
+            type="text"
+            required
+            minlength="3"
+            maxlength="50"
+            pattern="[A-Za-z-]"
+            [formControl]="firstName"
+            />
+        <label for="lastName">Last Name:</label>
+        <input
+            id="lastName"
+            placeholder="Enter Last Name"
+            type="text"
+            required
+            minlength="3"
+            maxlength="50"
+            pattern="[A-Za-z-]"
+            [formControl]="lastName"
+            />
+            <label for="password">Password:</label>
+            <input
+                id="password"
+                placeholder="Enter Password"
+                type="password"
+                required
+                minlength="8"
+                maxlength="50"
+                pattern="[A-Za-z0-9_-]"
+                [formControl]="password"
+                />
+            <label for="confirmPassword">Confirm Password:</label>
+            <input
+                id="confirmPassword"
+                placeholder="Enter Confirmed Password"
+                type="password"
+                required
+                minlength="8"
+                maxlength="50"
+                pattern="[A-Za-z0-9_-]"
+                [formControl]="confirmPassword"
+                />
+                    <!-- Login Button -->
+                    <button class="signInBtn"
+                    (click)=" onSubmit($event)"
+                    >Register
+                    </button> 
+                      
+                <br><br><br>
+                <app-error *ngIf= "hasError" [message]="errorMessage"></app-error>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- #region Original Code -->
+
+<!--<main class="container mx-auto">
+    <div class="m-4 rounded p-4 shadow">
+        <app-error *ngIf= "hasError" [message]="errorMessage"></app-error>
+        <form class="flex flex-col">
+            <label for="username" class="mb-2">Username:</label>
+            <input
+                id="username"
+                placeholder="Enter Username"
+                type="text"
+                class="mb-4 rounded bg-gray-50 px-4 py-2"
+                [formControl]="username"
+                />
+            <label for="firstName" class="mb-2">Email:</label>
+            <input
+                id="firstName"
+                placeholder="Enter First Name"
+                type="text"
+                class="mb-4 rounded bg-gray-50 px-4 py-2"
+                [formControl]="firstName"
+                />
+            <label for="lastName" class="mb-2">Email:</label>
+            <input
+                id="lastName"
+                placeholder="Enter Last Name"
+                type="text"
+                class="mb-4 rounded bg-gray-50 px-4 py-2"
+                [formControl]="lastName"
+                />
+                <label for="password" class="mb-2">Password:</label>
+                <input
+                    id="password"
+                    placeholder="Enter Password"
+                    type="password"
+                    class="mb-4 rounded bg-gray-50 px-4 py-2"
+                    [formControl]="password"
+                    />
+                <label for="confirmPassword" class="mb-2">Confirm Password:</label>
+                <input
+                    id="confirmPassword"
+                    placeholder="Enter Confirmed Password"
+                    type="password"
+                    class="mb-4 rounded bg-gray-50 px-4 py-2"
+                    [formControl]="confirmPassword"
+                    />-->
+                    <!-- Register Button -->
+                <!--<button class="mt-4 rounded bg-blue-500 px-4 py-2 text-white"
+                (click)=" onSubmit($event)"
+                >Register
+                </button>
+        </form>
+    </div>
+</main>-->
+
+<!--#endregion-->
+
+
+<!----------------------------------- END OF FILE ----------------------------------->
